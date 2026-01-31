@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 import { Icons } from './Icons';
@@ -30,6 +31,19 @@ const Navbar: React.FC = () => {
               <Icons.Magic className="w-4 h-4" />
               <span className="hidden sm:inline">Resume Maker</span>
               <span className="sm:hidden">Resume</span>
+            </NavLink>
+
+            <NavLink
+              to="/mock-interview"
+              className={({ isActive }) =>
+                `flex items-center gap-1.5 px-3 py-2 rounded-lg text-sm font-medium transition-all ${
+                  isActive ? 'bg-indigo-50 text-indigo-600' : 'text-slate-500 hover:text-slate-900 hover:bg-slate-50'
+                }`
+              }
+            >
+              <Icons.Mic className="w-4 h-4" />
+              <span className="hidden sm:inline">Mock Interview</span>
+              <span className="sm:hidden">Mock</span>
             </NavLink>
             
             <NavLink

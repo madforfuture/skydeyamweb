@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { 
   FileText, 
@@ -22,9 +23,18 @@ import {
   Brain,
   History,
   BookOpen,
-  Lightbulb
+  Lightbulb,
+  User,
+  UserCheck,
+  MessageSquare,
+  Mic,
+  MicOff,
+  Volume2,
+  PhoneOff,
+  Phone
 } from 'lucide-react';
 
+// Fixed missing property error by adding Lightbulb to the Icons export object
 export const Icons = {
   Resume: FileText,
   Job: Briefcase,
@@ -48,5 +58,14 @@ export const Icons = {
   Brain: Brain,
   History: History,
   Meaning: BookOpen,
-  Memory: Lightbulb
+  Memory: Lightbulb,
+  Lightbulb: Lightbulb,
+  User: User,
+  UserCheck: UserCheck,
+  Message: MessageSquare,
+  Mic: Mic,
+  MicOff: MicOff,
+  Volume: Volume2,
+  Hangup: PhoneOff,
+  Call: Phone
 };

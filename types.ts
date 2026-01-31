@@ -10,6 +10,7 @@ export interface SectionComparison {
   original: string;
   optimized: string;
   feedback: string;
+  hook?: string; // Interview hook for interviewer
 }
 
 export interface AtsAnalysis {
@@ -19,12 +20,26 @@ export interface AtsAnalysis {
   criticalIssues: string[];
 }
 
+export interface InterviewerNotes {
+  interviewerName: string;
+  targetedQuestions: string[];
+  deepDiveQuestions: string[];
+  behavioralQuestion: string;
+}
+
 export interface ResumeAnalysisResult {
   atsAnalysis: AtsAnalysis;
   summary: SectionComparison;
   skills: SectionComparison;
-  experience: SectionComparison[];
+  experience: (SectionComparison & { 
+    star?: { s: string; t: string; a: string; r: string } 
+  })[];
   education: SectionComparison;
+  // Specialized fields for Interview Mode
+  problemSolving?: string[];
+  interviewerNotes?: InterviewerNotes;
+  prepTips?: string[];
+  candidateName?: string;
 }
 
 export interface UserInput {

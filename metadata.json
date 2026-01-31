@@ -1,5 +1,7 @@
 {
   "name": "Smart Resume Maker",
-  "description": "AI-powered resume optimization tool to target specific job descriptions and beat ATS systems.",
-  "requestFramePermissions": []
+  "description": "AI-powered resume optimization tool and real-time voice mock interview assistant.",
+  "requestFramePermissions": [
+    "microphone"
+  ]
 }
